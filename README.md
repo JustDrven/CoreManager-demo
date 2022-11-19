@@ -1,5 +1,8 @@
 ---------------------------------
+
 <h1 align="center">CoreManager</h1>
+
+---------------------------------
 
 <br>
 
@@ -8,6 +11,7 @@
 - Command for /c <server> | Connect to bungeecord server
 - AntiVulgarity
 - Easy config
+- VIP join
 
 | **CoreManager's info** |
 |------------------------------------|
@@ -16,7 +20,19 @@
 | Development time ***3*** months |
 | Plugin coded in Java |
 
+<br />
+
+# Commands & Listeners
+| Commands & Listeners | Permissions |
+|----------------------|-------------|
+| /info                | None        |
+| /c (server)          | coremanager.commands.send.*            |
+| VIP join             | coremanager.listeners.join.vip                      |
+
+
 <br>
+
+# Config.yml
 
 ```sh
 prefix: "&8[&cCore&8] &7"
