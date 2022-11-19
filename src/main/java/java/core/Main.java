@@ -23,6 +23,7 @@ import java.core.listeners.PlayerListener;
 import java.core.listeners.ServerListPing;
 import java.core.utils.Colors;
 import java.core.utils.CoreManager;
+import java.core.utils.Logger;
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -75,14 +76,14 @@ public final class Main extends JavaPlugin {
         });
 
         // logger
-        System.out.println("[MCCore] - Plugin was been enabled!");
+        Logger.log(Logger.LogType.INFO, "Plugin was been enabled!");
         if (Bukkit.getServer().getOnlineMode() == true) {
-            System.out.println("[INFO] - OnlineMod is enabled!");
+            Logger.log(Logger.LogType.INFO, "OnlineMod is enabled!");
         }
         else if (Bukkit.getServer().getOnlineMode() == false) {
-            System.out.println("[INFO] - OnlineMod is disabled!");
+            Logger.log(Logger.LogType.ERROR, "&cOnlineMod is disabled!");
         } else {
-            System.out.println("[INFO] - Error wit OnlineMod");
+            Logger.log(Logger.LogType.ERROR, "OnlineMod is &cERROR!");
         }
     }
 
@@ -90,7 +91,7 @@ public final class Main extends JavaPlugin {
     public void onDisable() {
         instance = null;
         HandlerList.unregisterAll();
-        System.out.println("[MCCore] - Plugin was been disabled!");
+        Logger.log(Logger.LogType.INFO, "&cPlugin was been disabled!");
     }
 
     public static void send(Player p, String server) {
