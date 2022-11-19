@@ -1,0 +1,11 @@
+name: CoreManager
+version: '${version}'
+main: java.core.Main
+api-version: 1.19
+authors: [ Drven ]
+depend:
+  - ProtocolLib
+
+commands:
+  info:
+  c:
