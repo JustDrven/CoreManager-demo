@@ -39,4 +39,9 @@ prefix: "&8[&cCore&8] &7"
 motd: "&cCoreManager by Drven"
 permission-message: "&cYou're not allowed to do this!"
 ```
+
+<br />
+
+<h4 align="center">CoreManager | CopyRight</h4>
+
 ---------------------------
