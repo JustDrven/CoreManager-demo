@@ -31,6 +31,13 @@ import java.util.ArrayList;
 
 public final class Main extends JavaPlugin {
 
+
+    /*
+    *
+    * Main class
+    *
+    * */
+
     private static Main instance;
     private static ProtocolManager manager;
     public static ArrayList<Player> players = new ArrayList<Player>();
