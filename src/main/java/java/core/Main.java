@@ -18,17 +18,21 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.core.commnads.InfoCommand;
 import java.core.commnads.SendCommand;
+import java.core.listeners.InventoryListener;
+import java.core.listeners.PlayerListener;
 import java.core.listeners.ServerListPing;
 import java.core.utils.Colors;
 import java.core.utils.CoreManager;
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public final class Main extends JavaPlugin {
 
     private static Main instance;
     private static ProtocolManager manager;
+    public static ArrayList<Player> players = new ArrayList<Player>();
 
     public static Main getInstance() {
         return instance;
@@ -47,6 +51,8 @@ public final class Main extends JavaPlugin {
         manager = ProtocolLibrary.getProtocolManager();
         // listeners
         getServer().getPluginManager().registerEvents(new ServerListPing(), this);
+        getServer().getPluginManager().registerEvents(new InventoryListener(), this);
+        getServer().getPluginManager().registerEvents(new PlayerListener(), this);
         // commands
         getCommand("info").setExecutor(new InfoCommand());
         getCommand("c").setExecutor(new SendCommand());
